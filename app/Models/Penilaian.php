@@ -17,21 +17,11 @@ class Penilaian extends Model
         'nilai',
     ];
 
-    protected $casts = [
-        'nilai' => 'float',
-    ];
-
-    /**
-     * Relasi: Penilaian milik satu Alternatif
-     */
     public function alternatif()
     {
         return $this->belongsTo(Alternatif::class);
     }
 
-    /**
-     * Relasi: Penilaian milik satu Kriteria
-     */
     public function kriteria()
     {
         return $this->belongsTo(Kriteria::class);
